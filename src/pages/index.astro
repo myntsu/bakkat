@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Contact from '../components/Contact.astro';
+import { Icon } from 'astro-icon';
+import Products from '../components/Products.astro';
+---
+
+<Layout
+  title="Crece simple – Asesoría y gestión empresarial"
+  description="Ofrecemos servicios de asesoría contable y tributaria especializados en pymes, como también servicios de diseño de logotipos y asesorías de negocio integrales. Con presencia en Iquique y atendiendo a clientes en todo Chile. ¡Confía en nuestro equipo para el éxito de tu empresa!"
+  ogTitle="Crece simple – Asesoría y gestión empresarial"
+  ogDescription="Ofrecemos servicios de asesoría contable y tributaria especializados en pymes, como también servicios de diseño de logotipos y asesorías de negocio integrales. Con presencia en Iquique y atendiendo a clientes en todo Chile. ¡Confía en nuestro equipo para el éxito de tu empresa!"
+  ogUrl="https://www.crecesimple.cl/"
+  canonicalURL="https://www.crecesimple.cl/"
+  favicon="./favicon.svg">
+	<main>
+		<Hero />
+		<About />
+        <Products />
+		<Testimonials />
+		<Contact />
+	</main>
+
+    <button type="button" class="whatsapp-link" aria-label="Vinculo Whatsapp">
+        <a href="https://wa.me/56976643861" target="_blank" aria-label="Número de WhatsApp">
+            <Icon name="mdi:whatsapp" width="48" height="48" />
+            <p>¡Hablemos!</p>
+        </a>
+    </button>
+</Layout>
+
+<style lang="scss">
+    .whatsapp-link {
+        all: unset;
+
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+
+        z-index: 99999;
+
+        &:is(:hover, :focus-visible) {
+            a {
+                width: 100%;
+                height: 100%;
+
+                p {
+                    display: block;
+                    padding-inline: .5rem;
+                }
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+
+            width: 48px;
+            height: 48px;
+
+            color: hsl(var(--white));
+            background-color: hsl(115 70% 50%);
+            border-radius: 1.5rem 1.5rem 1.5rem .25rem;
+            text-decoration: none;
+
+            svg {
+                display: block;
+            }
+
+            p {
+                display: none;
+                white-space: nowrap;
+                margin: 0;
+            }
+        }
+    }
+</style>
+
+<script>
+  import '../js/script.js';
+</script>

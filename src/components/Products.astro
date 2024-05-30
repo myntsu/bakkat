@@ -1,0 +1,113 @@
+<section id="Products">
+    <div>
+        <h2>Revisa nuestros servicios</h2>
+        <div>
+
+        </div>
+
+        <a href="https://39ac7b-3.myshopify.com/" target="_blank" class="checkout-more">Ver más servicios</a>
+    </div>
+</section>
+<div class="divider">
+  <div class="custom-shape-divider-bottom-1690984327">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+    </svg>
+  </div>
+</div>
+
+<style lang="scss">
+    /* Products */
+    #Products {
+        background-color: #9cb8bc;
+        margin-block-end: 0;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            width: 100%;
+            max-width: 1100px;
+            margin-inline: auto;
+            padding: var(--padding);
+
+            h2 {
+                display: flex;
+                justify-content: center;
+
+                position: relative;
+                color: hsl(var(--main-dark), 90%);
+                font-size: 3rem;
+                margin-block-start: 0;
+                margin-block-end: 4rem;
+                
+                text-align: center;
+            }
+
+            h3 {
+                margin: 0;
+                font-size: .875rem;
+                color: hsl(var(--important));    
+
+                text-align: center;
+            }
+
+            div {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        .checkout-more {
+          display: inline-flex; 
+          text-decoration: none;
+          margin-inline: auto;
+          padding: 1rem 2rem;
+
+          color: hsl(var(--text));
+          background-color: hsl(var(--important));
+          border-radius: .75rem;
+
+          box-shadow: 3px 3px 0 hsl(var(--text));
+
+          cursor: pointer;
+          user-select: none;
+
+          transition: translate 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+          &:is(:hover, :focus-visible) {
+            opacity: .9;
+          }
+
+          &:is(:active) {
+            translate: 3px 3px;
+            box-shadow: none;
+          }
+        }
+    }
+
+    .divider {
+      height: 100px;
+    }
+
+    .custom-shape-divider-bottom-1690984327 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .custom-shape-divider-bottom-1690984327 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 100px;
+    }
+
+    .custom-shape-divider-bottom-1690984327 .shape-fill {
+        fill: #9cb8bc;
+    }
+</style>

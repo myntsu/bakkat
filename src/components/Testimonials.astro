@@ -1,0 +1,184 @@
+---
+// astro imports
+import { Image } from 'astro:assets';
+
+// img import
+import casaBambini from '../assets/logo/casa-bambini.png'
+import rinconParrillero from '../assets/logo/rincon-parrillero.png'
+import dulceJulieta from '../assets/logo/dulce-julieta.png'
+import monkeyCoffee from '../assets/logo/monkey-coffee.png'
+import ikebana from '../assets/logo/ikebana.png'
+import ciro from '../assets/logo/ciro.png'
+import deyka from '../assets/logo/deyka.png'
+import namat from '../assets/logo/namat.png'
+import insupet from '../assets/logo/insupet.png'
+---
+
+<section id="Testimonials">
+  <div>
+    <h2>Quienes han confiado en nosotros</h2>
+    <div id="Affiliates">
+      <div class="box">
+        <a
+          href="https://www.instagram.com/casabambiniiquique/"
+          aria-label="Casa Bambini">
+          <Image
+            src={casaBambini}
+            alt="Logo Casa Bambini"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.instagram.com/rincon.parrillero.premium/"
+          aria-label="Rincon Parrilero">
+          <Image
+            src={rinconParrillero}
+            alt="Logo Rincon Parrillero"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.instagram.com/dulcejulietadulces/"
+          aria-label="Dulce Julieta">
+          <Image
+            src={dulceJulieta}
+            alt="Logo Dulce Julieta"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.instagram.com/monkeycoffee.cl/"
+          aria-label="Monkey Coffee">
+          <Image
+            src={monkeyCoffee}
+            alt="Logo Monkey Coffee"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <div
+          aria-label="Ikebana Smart Garden">
+          <Image
+            src={ikebana}
+            alt="Logo Ikebana Smart Garden"
+          />
+        </div>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.youtube.com/@cirojonasconstruccion"
+          aria-label="Ciro Jonas Construccion">
+          <Image
+            src={ciro}
+            alt="Logo Ciro Jonas Construccion"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <div
+          aria-label="Deyka">
+          <Image
+            src={deyka}
+            alt="Logo Deyka"
+          />
+        </div>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.instagram.com/cafeterianamat.iqq/"
+          aria-label="Namat">
+          <Image
+            src={namat}
+            alt="Logo Namat"
+          />
+        </a>
+      </div>
+      <div class="box">
+        <a
+          href="https://www.instagram.com/insupet/"
+          aria-label="Insupet">
+          <Image
+            src={insupet}
+            alt="Logo Insupet"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  h2 {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    color: hsl(var(--main-dark), 90%);
+  }
+
+  #Testimonials > div {
+    width: 100%;
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  #Affiliates {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(min(calc(150px + 0.5rem), 100%), 1fr)
+    );
+    gap: 2rem;
+    justify-items: center;
+    padding-inline: 1rem;
+  }
+
+  .box {
+    background-color: hsl(var(--secondary));
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .box:is(:hover, :focus-visible) {
+    background-color: hsl(var(--important));
+    transition: background-color 200ms linear;
+  }
+
+  .box > a:is(:hover, :focus-visible) {
+    opacity: 0.9;
+    outline: 4px solid hsl(var(--important));
+    outline-offset: 10px;
+  }
+
+  .box:is(:active) {
+    scale: 0.97;
+  }
+
+  .box > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--white));
+    margin: 0.25rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .box img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+
+  .zoom-125 {
+    zoom: 125%;
+  }
+
+  .zoom-150 {
+    zoom: 150%;
+  }
+</style>

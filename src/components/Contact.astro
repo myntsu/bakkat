@@ -1,0 +1,204 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<section id="Contact">
+    <div class="wrapper">
+        <form action="https://formsubmit.co/contacto@crecesimple.cl" method="POST">
+            <div class="form-information">
+                <h3>Contacto</h3>
+                <hr>
+                <p>Si tienes alguna duda o consulta, no dudes en enviarnos tu informacion.</p>
+                <p><Icon class="icon" name="mdi:phone" /> Te contactaremos directamente por <b><Icon class="icon" name="mdi:whatsapp" /> Whatsapp</b> o <b><Icon class="icon" name="mdi:email" /> Email</b>.</p>
+            </div>
+            <div class="form-wrapper">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" name="Nombre" placeholder="Nombre Apellido" autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="Email" placeholder="contacto@crecesimple.cl" autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input id="telefono" type="text" name="Telefono" placeholder="+56 9 766 43861" autocomplete="tel">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <textarea name="Descripcion" id="descripcion" cols="30" rows="7" placeholder="Buenas tardes, me gustaria conversar respecto de las propuestas que tienen."></textarea>
+                </div>
+                <button class="submit-button" type="submit" aria-label="Enviar formulario">
+                    <span>
+                        <Icon class="icon email-closed" name="mdi:email" />
+                        <Icon class="icon email-opened" name="mdi:email-open" />
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<style>
+    .icon {
+        width: 16px;
+        aspect-ratio: 1;
+        position: relative;
+        top: 3px;
+    }
+
+    /* Contact */
+    #Contact {
+        color: hsl(var(--main-dark));
+        background-color: hsl(var(--white));
+    }
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        margin-inline: auto;
+        max-width: 1100px;
+        max-height: fit-content;
+        padding: var(--padding);
+    }
+
+    .wrapper > * {
+        flex: 1 0 0;
+        min-width: min(300px, 100%);
+    }
+
+    .wrapper > * {
+       
+    }
+
+    #Contact form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        width: 100%;
+        max-width: 700px;
+        margin: 1em auto;
+        padding: 3rem 1rem;
+        
+        border: 1px solid hsl(var(--main-dark), .5);
+        border-top: 5px solid hsl(var(--important));
+        border-bottom: 5px solid hsl(var(--important));
+        border-radius: var(--radius-accent);
+    }
+
+    #Contact form .form-information {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    #Contact form .form-information h3 {
+        margin: 0;
+    }
+
+    #Contact form .form-information p:nth-of-type(1) {
+        margin: 0;
+    }
+
+    #Contact form .form-information p:nth-of-type(2) {
+        color: gray;
+        font-size: .9rem;
+        margin-top: 0;
+    }
+
+    #Contact form .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 600px;
+        gap: .75em;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: .25em;
+        font-size: 1.5rem;
+    }
+
+    .form-group input {
+        flex: 1 0 4ch;
+
+        padding-inline-start: .5em;
+
+        color: hsl(var(--main-dark));
+        border: 1px solid hsl(var(--main-dark), .5);
+        border-radius: var(--radius);
+        font-family: inherit;
+    }
+
+    .form-group textarea {
+        resize: none;
+        padding-block-start: .5em;
+        padding-inline: .5em;
+        color: hsl(var(--main-dark));
+        border: 1px solid hsl(var(--main-dark), .5);
+        border-radius: var(--radius);
+        font-family: inherit;
+        font-size: .875rem;
+    }
+
+    .form-group input:is(:focus, :focus-within),
+    .form-group textarea:is(:focus, :focus-within) {
+        outline: 3px solid hsl(var(--important));
+        outline-offset: 0;
+    }
+
+    .submit-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 56px;
+        height: 56px;
+
+        padding: var(--padding);
+        margin: 2rem auto 0;
+
+        color: hsl(var(--text));
+        background-color: hsl(var(--important));
+        border: 0;
+        border-radius: 50%;
+        
+        font-size: 1.75rem;
+        overflow: hidden;
+    }
+
+    .submit-button .icon {
+        width: 36px;
+        position: static;
+    }
+
+    .submit-button span {
+        display: flex;
+    }
+
+    .submit-button .email-opened {
+        display: none;
+    }
+
+    .submit-button:is(:hover, :focus, :focus-within) .email-opened {
+        display: block;
+    }
+
+    .submit-button:is(:hover, :focus, :focus-within) .email-closed {
+        display: none;
+    }
+
+    .submit-button:is(:active) {
+        scale: .9;
+    }
+
+    .submit-button:is(:active) .email-opened {
+        transform: translateX(200%);
+        transition: 200ms ease-in;
+    }
+</style>
