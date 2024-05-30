@@ -4,7 +4,7 @@ import { Icon } from "astro-icon";
 import { Image } from "astro:assets";
 
 // img imports
-import group from "../assets/avatar/group.jpg";
+import group from "../assets/avatar/group.webp";
 import jorge from "../assets/avatar/jorge.png";
 import jorgeActive from "../assets/avatar/jorge-active.png";
 import maria from "../assets/avatar/maria-jose.png";
@@ -27,9 +27,7 @@ import arantzazuActive from "../assets/avatar/arantzazu-active.png";
           />
 
           <h3>
-            Nuestro propósito es <span class="important">AYUDAR</span> a que te
-            enfoques tranquilo en tu meta, encargándonos de tareas contables y
-            asesorándote mientras avanzas en tu negocio.
+            Nuestro propósito es <span>crear</span> los mejores bacalaos en Chile.
           </h3>
         </div>
 
@@ -231,8 +229,9 @@ import arantzazuActive from "../assets/avatar/arantzazu-active.png";
 
       img {
         display: block;
-        max-width: 100%;
+        width: 100%;
         height: initial;
+        object-fit: cover;
       }
 
       h3 {
