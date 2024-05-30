@@ -5,12 +5,12 @@ import { Image } from "astro:assets";
 
 // img imports
 import group from "../assets/avatar/group.webp";
-import jorge from "../assets/avatar/jorge.png";
-import jorgeActive from "../assets/avatar/jorge-active.png";
-import maria from "../assets/avatar/maria-jose.png";
-import mariaActive from "../assets/avatar/maria-jose-active.png";
-import arantzazu from "../assets/avatar/arantzazu.png";
-import arantzazuActive from "../assets/avatar/arantzazu-active.png";
+import personOne from "../assets/avatar/personOne.jpg";
+import personOneActive from "../assets/avatar/personOneActive.jpg";
+// import maria from "../assets/avatar/maria-jose.png";
+// import mariaActive from "../assets/avatar/maria-jose-active.png";
+// import arantzazu from "../assets/avatar/arantzazu.png";
+// import arantzazuActive from "../assets/avatar/arantzazu-active.png";
 ---
 
 <section id="About-us">
@@ -35,24 +35,24 @@ import arantzazuActive from "../assets/avatar/arantzazu-active.png";
         <div class="image-picker">
           <div
             class="image-holder selected"
-            data-member="jorge"
+            data-member="personOne"
             tabindex="0">
             <Image
               class="members-image inactive"
-              src={jorge}
-              data-img-type={jorge}
-              alt="Jorge Crece Simple"
+              src={personOne}
+              data-img-type={personOne}
+              alt="PersonOne Crece Simple"
               format="webp"
             />
             <Image
               class="members-image active"
-              src={jorgeActive}
-              data-img-type={jorgeActive}
-              alt="Jorge Crece Simple"
+              src={personOneActive}
+              data-img-type={personOneActive}
+              alt="PersonOne Crece Simple"
               format="webp"
             />
           </div>
-          <div
+          <!-- <div
             class="image-holder"
             data-member="maria"
             tabindex="0">
@@ -89,29 +89,24 @@ import arantzazuActive from "../assets/avatar/arantzazu-active.png";
               alt="Arantzazu Crece Simple"
               format="webp"
             />
-          </div>
+          </div> -->
         </div>
 
         <!-- descriptions -->
         <div class="member-description">
           <div
             class="display"
-            data-member="jorge">
-            <h4>Jorge Cortez</h4>
+            data-member="personOne">
+            <h4>Jacinto Rodriguez</h4>
             <h5><Icon name="mdi:account-box" /> Ingeniero Comercial</h5>
 
             <h5>
-              <Icon name="mdi:chart-bar" /> Años de experiencia: <span
-                class="important-contrast">4</span>
+              <Icon name="mdi:chart-bar" /> Años de experiencia:
+                10
             </h5>
             <h4>Sobre mí</h4>
             <p>
-              Mi formación incluye diplomados en análisis financiero y marketing
-              digital, como también conocimientos en planificación estratégica.
-              Siempre comprometido con las personas, respetando la diversidad y
-              dignidad humana, así como también aportando ideas y experiencias
-              que contribuyan al crecimiento de nuestros clientes. Cuando no
-              estoy trabajando me gusta leer, escuchar música o tocar guitarra.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem veniam, exercitationem possimus maxime placeat corrupti maiores aspernatur amet perferendis voluptatibus obcaecati suscipit modi odit ducimus, a repellendus? Illo, porro sapiente!
             </p>
           </div>
           <div data-member="maria">
@@ -215,6 +210,10 @@ import arantzazuActive from "../assets/avatar/arantzazu-active.png";
 </section>
 
 <style lang="scss">
+  .members-image {
+    max-width: 300px;
+  }
+
   .about-us {
     display: grid;
     grid-template-columns: 1fr;
@@ -325,6 +324,7 @@ import arantzazuActive from "../assets/avatar/arantzazu-active.png";
         }
 
         h5 {
+          font-size: 1rem;
           margin: 0;
           color: hsl(var(--main-dark), 0.8);
 
