@@ -5,8 +5,8 @@ import CallToAction from "./utility/CallToAction.astro";
 <header id="Home">
     <div class="hero-wrapper">
         <div class="headers-mask">
-            <h1 class="important-contrast">Expertos en Asesoría Contable y de negocios</h1>
-            <h2>para <span class="important-contrast">PYMEs</span> en <span class="important-contrast">Iquique</span> y en línea, adaptados a tus requerimientos individuales</h2>
+            <h1 class="important-contrast">Somos Bakkat</h1>
+            <h2>No te confundas con <span class="important-contrast">bacalao</span> que eso es <span class="important-contrast">otra cosa</span></h2>
         </div>
         <CallToAction />
 
@@ -73,7 +73,7 @@ import CallToAction from "./utility/CallToAction.astro";
     }
 
     .headers-mask {
-        display: grid;
+        /* display: grid; */
         grid-template-rows: auto 60vh;
     }
 
@@ -115,80 +115,5 @@ import CallToAction from "./utility/CallToAction.astro";
 
     .custom-shape-divider-bottom-1690984327 .shape-fill {
         fill: hsl(var(--white));
-    }
-
-    @media only screen and (max-width: 760px) {
-        .navbar {
-            background-color: hsl(var(--main-dark));
-        }
-
-        .navbar-wrapper {
-            justify-content: space-between;
-            position: relative;
-
-            padding: 2em 1.5em;
-        }
-
-        .navbar-toggler {
-            display: inline;
-        }
-
-        .navbar-items {
-            visibility: hidden;
-            position: absolute;
-            flex-direction: column;
-            gap: 1em;
-
-            opacity: 0;
-            transform: translateY(-150%);
-        }
-
-        #checkbox:checked~.navbar {
-            background-color: red;
-        }
-
-        #checkbox:checked {
-            margin-bottom: 5rem;
-        }
-
-        #checkbox:checked~.navbar-items {
-            visibility: visible;
-            top: calc(var(--height));
-            left: 0;
-            z-index: 1;
-
-            width: 100%;
-            padding: 1em;
-            margin-top: calc(var(--font) + 2vh);
-            padding-top: calc(var(--font) + 2vh);
-
-            background-color: hsl(var(--main-dark));
-            border-bottom: 1px solid hsl(var(--border-clr), 80%);
-
-            opacity: 1;
-            transform: translateY(0%);
-            transform-origin: top;
-            transition: 500ms ease;
-        }
-
-        #checkbox:checked~.navbar-items>a {
-            transition-delay: 400ms;
-        }
-
-        .separator {
-            display: none;
-        }
-
-        .navbar-items a:is(:hover, :focus-within)::before {
-            width: 0%;
-        }
-
-        .hero-wrapper {
-            padding-inline-start: 1em;
-        }
-
-        .active::after {
-            background-color: transparent;
-        }
     }
 </style>

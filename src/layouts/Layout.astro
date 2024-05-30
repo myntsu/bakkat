@@ -65,20 +65,18 @@ const { favicon } = Astro.props as Props;
 
     --white: 0, 100%, 100%;
     --nav-link: 0, 0%, 100%;
-    --main-dark: 0, 0%, 7%;
+    --main-dark: 193, 99%, 18%;
     --border-clr: 0, 0%, 100%;
 
     --text: 0, 0%, 95%;
     --text-contrast: 0, 20%, 20%;
-    --important: 223, 42%, 41%;
-	--secondary: 179, 89%, 36%;
-	--important-contrast: 183, 99%, 27%;
+    --important: 193, 99%, 28%;
+	--secondary: 33, 100%, 83%;
+	--important-contrast: 33, 100%, 83%;
     --shadow: 0, 100%, 100%;
     --tag: 206, 100%, 6%;
-	color: rgb(1, 129, 139);
-	color: rgb(9, 101, 120);
-	color: hsl(179, 89%, 36%);
-	color: hsl(183, 99%, 27%);
+	color: hsl(193, 99%, 28%);
+	color: hsl(33, 100%, 83%);
 	}
 
 	*,
@@ -168,11 +166,11 @@ const { favicon } = Astro.props as Props;
 	}
 
 	.navbar-bgswap {
-		background-color: #192743 !important;
+		background-color: hsl(var(--secondary)) !important;
 
 		@media only screen and (max-width: 760px) {
 			.navbar-items {
-				background-color: #192743  !important;
+				background-color: hsl(var(--secondary))  !important;
 			}
 		}
 	}
@@ -229,76 +227,6 @@ const { favicon } = Astro.props as Props;
 		* {
 			transition: none;
 			animation: none;
-		}
-	}
-
-	@media only screen and (max-width: 760px) {
-		.navbar {
-			background-color: hsl(var(--main-dark));
-		}
-
-		.navbar-wrapper {
-			justify-content: space-between;
-			position: relative;
-
-			padding: 2em 1.5em;
-		}
-
-		.navbar-toggler {
-			display: inline;
-		}
-
-		.navbar-items {
-			visibility: hidden;
-			position: absolute;
-			flex-direction: column;
-			gap: 1em;
-
-			opacity: 0;
-			transform: translateY(-150%);
-		}
-
-		#checkbox:checked~.navbar {
-			background-color: red;
-		}
-
-		#checkbox:checked {
-			margin-bottom: 5rem;
-		}
-
-		#checkbox:checked~.navbar-items {
-			visibility: visible;
-			top: 4rem;
-			left: 0;
-			z-index: 1;
-			transform: translate(100%, 0%);
-
-			width: 100%;
-			padding: 1em;
-
-			background-color: hsl(var(--main-dark));
-			border-bottom: 1px solid hsl(var(--border-clr), 80%);
-
-			opacity: 1;
-			transform: translateY(0%);
-			transform-origin: top;
-			transition: transform 500ms ease, background-color 300ms ease;
-		}
-
-		.separator {
-			display: none;
-		}
-
-		.navbar-items a:is(:hover, :focus-within)::before {
-			width: 0%;
-		}
-
-		.hero-wrapper {
-			padding-inline-start: 1em;
-		}
-
-		.active::after {
-			background-color: transparent;
 		}
 	}
 </style>
