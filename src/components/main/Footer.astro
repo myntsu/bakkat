@@ -3,157 +3,202 @@ import { Icon } from "astro-icon";
 ---
 
 <footer>
-    <div>
-        <div class="footer-links">
-            <a href="#Home">Inicio</a>
-            <a href="#About-us">Nosotros</a>
-            <a href="#Products">Servicios</a>
-            <a href="#Testimonials">Clientes</a>
-            <a href="#Contact">Contacto</a>
-        </div>
-        <div class="contact-info">
-            <p><Icon name="mdi:map-marker" /> <span class="bold">Santiago,</span> Región Metropolitana, Chile.</p>
-            <p><Icon name="mdi:phone" /> Teléfono: <a href="tel:56941602613" class="bold">+56 9 4160 2613</a></p>
-            <p><Icon name="mdi:email" /> Correo electrónico: <a href="soporte.bakkat@outlook.com" class="bold">soporte.bakkat@outlook.com</a></p>
-        </div>
-        <div class="footer-aside">
-            <h3>Síguenos</h3>
-            <div class="social-media">
-                <a href="/" target="_blank" aria-label="Página Instagram">
-                    <Icon name="mdi:instagram" />
-                </a>
-                <a href="/" target="_blank" aria-label="Número de WhatsApp">
-                    <Icon name="mdi:whatsapp" />
-                </a>
-                <a href="/" aria-label="Página TikTok">
-                    <Icon name="ic:baseline-tiktok" />
-                </a>
-            </div>
-        </div>
+  <div>
+    <div class="footer-links">
+      <a href="#Home">Inicio</a>
+      <a href="#About-us">Nosotros</a>
+      <a href="#Products">Servicios</a>
+      <a href="#Testimonials">Clientes</a>
+      <a href="#Contact">Contacto</a>
     </div>
+    <div class="contact-info">
+      <h4>Oficina Principal</h4>
+      <p>
+        <Icon name="mdi:map-marker" />
+        <span class="bold">Cerro el Plomo 5931, Las Condes,</span>Santiago,
+        Chile.
+      </p>
+      <p>
+        <Icon name="mdi:phone" /> Teléfono: <a
+          href="tel:56228146505"
+          class="bold"
+          >+56 2 2814 6505</a>
+      </p>
+      <p class="border-bottom">
+        <Icon name="mdi:email" /> Correo electrónico: <a
+          href="contacto@bakkat.com"
+          class="bold"
+          >contacto@bakkat.com</a>
+      </p>
+
+      <h4>Oficina China</h4>
+      <p>
+        <Icon name="mdi:map-marker" />
+        <span class="bold"
+          >Room 1513 D11, R&F Yinglong Plaza, N° 76 Huanpu Avenue West,</span
+        > Tianhe District, Guangzhou City, Guangdong Province, China
+      </p>
+    </div>
+    <div class="footer-aside">
+      <h3>Síguenos</h3>
+      <div class="social-media">
+        <a
+          href="/"
+          target="_blank"
+          aria-label="Página Instagram">
+          <Icon name="mdi:instagram" />
+        </a>
+        <a
+          href="https://wa.me/56941602613"
+          target="_blank"
+          aria-label="Número de WhatsApp">
+          <Icon name="mdi:whatsapp" />
+        </a>
+        <a
+          href="/"
+          aria-label="Página TikTok">
+          <Icon name="ic:baseline-tiktok" />
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <style>
-    /* Footer */
+  /* Footer */
+  footer {
+    width: 100%;
+    background-color: hsl(var(--main-dark));
+    padding-block-start: 5rem;
+  }
+
+  footer > div {
+    display: flex;
+    gap: 3em;
+    flex-wrap: wrap;
+
+    width: 100%;
+    max-width: 1100px;
+    margin-inline: auto;
+    padding: var(--padding);
+    background-color: hsl(var(--main-dark));
+    border-top: 1px solid hsl(var(--border-clr), 20%);
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 150px;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid hsl(var(--border-clr), 20%);
+  }
+
+  .footer-links a {
+    color: hsl(var(--nav-link), 50%);
+    font-size: calc(var(--font) - 0.1rem);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .footer-links a:hover {
+    color: hsl(var(--nav-link));
+  }
+
+  .footer-aside {
+    gap: 0.25em;
+    flex-wrap: wrap;
+    margin-inline-start: auto;
+  }
+
+  .footer-aside h3 {
+    width: 100%;
+    font-size: 1.25rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .footer-aside .social-media > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  .social-media a {
+    color: hsl(var(--text));
+    text-decoration: none;
+    font-size: 1.75rem;
+  }
+
+  .social-media a:hover {
+    scale: 0.95;
+    opacity: 0.5;
+  }
+
+  .social-media svg {
+    width: 2rem;
+  }
+
+  @media only screen and (max-width: 880px) {
     footer {
-        width: 100%;
-        background-color: hsl(var(--main-dark));
-        padding-block-start: 5rem;
+      padding-block-start: 2.5rem;
     }
 
     footer > div {
-        display: flex;
-        gap: 3em;
-        flex-wrap: wrap;
-
-        width: 100%;
-        max-width: 1100px;
-        margin-inline: auto;
-        padding: var(--padding);
-        background-color: hsl(var(--main-dark));
-        border-top: 1px solid hsl(var(--border-clr), 20%);
+      height: 100%;
+      gap: 1.5em;
+      border-top: 0;
     }
 
     .footer-links {
-        display: flex;
-        flex-direction: column;
-        gap: .5em;
-        width: 150px;
-        padding-bottom: .5em;
-        border-bottom: 1px solid hsl(var(--border-clr), 20%);
-    }
-
-    .footer-links a {
-        color: hsl(var(--nav-link), 50%);
-        font-size: calc(var(--font) - 0.1rem);
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .footer-links a:hover {
-        color: hsl(var(--nav-link));
+      width: 100%;
     }
 
     .footer-aside {
-        gap: .25em;
-        flex-wrap: wrap;
-        margin-inline-start: auto;
+      margin: auto;
+      padding-bottom: 1em;
     }
 
-    .footer-aside h3 {
-        width: 100%;
-        font-size: 1.25rem;
-        margin: 0;
-        text-align: center;
+    h4 {
+      text-align: center;
     }
+  }
 
-    .footer-aside .social-media > div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 2rem;
-    }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid hsl(var(--border-clr), 20%);
+    max-width: 650px;
+  }
 
-    .social-media a {
-        color: hsl(var(--text));
-        text-decoration: none;
-        font-size: 1.75rem;
-    }
+  .contact-info h4 {
+    margin: 0;
+  }
 
-    .social-media a:hover {
-        scale: .95;
-        opacity: .5;
-    }
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin: 0;
+    color: hsl(var(--nav-link), 50%);
+  }
 
-    .social-media svg {
-        width: 2rem;
-    }
+  .contact-info p svg {
+    width: 20px;
+    aspect-ratio: 1;
+    position: relative;
+  }
 
-    @media only screen and (max-width: 880px) {
-        footer {
-            padding-block-start: 2.5rem;
-        }
+  .contact-info p .bold {
+    color: hsl(var(--white)) !important;
+  }
 
-        footer > div {
-            height: 100%;
-            gap: 1.5em;
-            border-top: 0;
-        }
-
-        .footer-links {
-            width: 100%;
-        }
-
-        .footer-aside {
-            margin: auto;
-            padding-bottom: 1em;
-        }
-    }
-
-    .contact-info {
-        display: flex;
-        flex-direction: column;
-        gap: .5em;
-        padding-bottom: .5em;
-        border-bottom: 1px solid hsl(var(--border-clr), 20%);
-    }
-
-    .contact-info p {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: .25rem;
-        margin: 0;
-        color: hsl(var(--nav-link), 50%);
-    }
-
-    .contact-info p svg {
-        width: 20px;
-        aspect-ratio: 1;
-        position: relative;
-    }
-
-    .contact-info p .bold {
-        color: hsl(var(--white)) !important;
-    }
+  .border-bottom {
+    padding-bottom: .5rem;
+    border-bottom: 1px solid hsl(var(--border-clr),20%);
+  }
 </style>
