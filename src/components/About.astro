@@ -1,16 +1,6 @@
 ---
 // astro import
 import { Icon } from "astro-icon";
-import { Image } from "astro:assets";
-
-// img imports
-import group from "../assets/avatar/group.webp";
-import personOne from "../assets/avatar/personOne.jpg";
-import personOneActive from "../assets/avatar/personOneActive.jpg";
-// import maria from "../assets/avatar/maria-jose.png";
-// import mariaActive from "../assets/avatar/maria-jose-active.png";
-// import arantzazu from "../assets/avatar/arantzazu.png";
-// import arantzazuActive from "../assets/avatar/arantzazu-active.png";
 ---
 
 <section id="About-us">
@@ -326,71 +316,3 @@ import personOneActive from "../assets/avatar/personOneActive.jpg";
     fill: #9cb8bc;
   }
 </style>
-
-<script lang="js">
-  window.addEventListener("load", function () {
-    const imageHolders = document.querySelectorAll(".image-holder");
-
-    function selectImageHolder(imageHolder) {
-      // If the clicked imageHolder is already selected, do nothing
-      if (imageHolder.classList.contains("selected")) {
-        return;
-      }
-
-      // Find the currently selected imageHolder
-      const currentSelected = document.querySelector(".image-holder.selected");
-
-      // If there is a currently selected imageHolder, remove 'selected' class and swap 'active' and 'inactive' classes for its images
-      if (currentSelected) {
-        currentSelected.classList.remove("selected");
-        swapImageClasses(currentSelected);
-        hideMemberDescription(currentSelected);
-      }
-
-      // Add the 'selected' class to the clicked imageHolder, swap 'active' and 'inactive' classes for its images, and show its member description
-      imageHolder.classList.add("selected");
-      swapImageClasses(imageHolder);
-      showMemberDescription(imageHolder);
-    }
-
-    function hideMemberDescription(imageHolder) {
-      const member = imageHolder.getAttribute("data-member");
-      const memberDescription = document.querySelector(
-        `.member-description > div[data-member="${member}"]`
-      );
-      if (memberDescription) {
-        memberDescription.classList.remove("display");
-      }
-    }
-
-    function showMemberDescription(imageHolder) {
-      const member = imageHolder.getAttribute("data-member");
-      const memberDescription = document.querySelector(
-        `.member-description > div[data-member="${member}"]`
-      );
-      if (memberDescription) {
-        memberDescription.classList.add("display");
-      }
-    }
-
-    function swapImageClasses(imageHolder) {
-      const images = imageHolder.querySelectorAll(".members-image");
-      images.forEach((image) => {
-        if (image.classList.contains("active")) {
-          image.classList.remove("active");
-          image.classList.add("inactive");
-        } else if (image.classList.contains("inactive")) {
-          image.classList.remove("inactive");
-          image.classList.add("active");
-        }
-      });
-    }
-
-    // Add click event listeners to all imageHolders
-    imageHolders.forEach((imageHolder) => {
-      imageHolder.addEventListener("click", function () {
-        selectImageHolder(imageHolder);
-      });
-    });
-  });
-</script>
