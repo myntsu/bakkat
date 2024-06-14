@@ -1,13 +1,102 @@
-<section id="Products">
-    <div>
-        <h2>Nuestros servicios</h2>
-        <div>
-
+<section id="Services">
+  <div>
+    <h2>Nuestros servicios</h2>
+    <div class="list-of-services">
+      <article class="card">
+        <div class="card-inner">
+          <div class="front">
+            <img
+              class="card-img"
+              loading="lazy"
+              src="/img/civil.webp"
+              alt=" "
+            />
+            <div class="name-of-service">
+              <h3>Servicio 1</h3>
+            </div>
+          </div>
         </div>
-
-        <!-- <a href="/" target="_blank" class="checkout-more">Ver más servicios</a> -->
+      </article>
+      <article class="card">
+        <div class="card-inner">
+          <div class="front">
+            <img
+              class="card-img"
+              loading="lazy"
+              src="/img/comercial.webp"
+              alt=" "
+            />
+            <div class="name-of-service">
+              <h3>Servicio 2</h3>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-inner">
+          <div class="front">
+            <img
+              class="card-img"
+              loading="lazy"
+              src="/img/pesquero.webp"
+              alt=" "
+            />
+            <div class="name-of-service">
+              <h3>Servicio 3</h3>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-inner">
+          <div class="front">
+            <img
+              class="card-img"
+              loading="lazy"
+              src="/img/urbanistico.webp"
+              alt=" "
+            />
+            <div class="name-of-service">
+              <h3>Servicio 4</h3>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-inner">
+          <div class="front">
+            <img
+              class="card-img"
+              loading="lazy"
+              src="/img/laboral.webp"
+              alt=" "
+            />
+            <div class="name-of-service">
+              <h3>Servicio 5</h3>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-inner">
+          <div class="front">
+            <img
+              class="card-img"
+              loading="lazy"
+              src="/img/tributario.webp"
+              alt=" "
+              data-image="tributario"
+            />
+            <div class="name-of-service">
+              <h3>Servicio 6</h3>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
+  </div>
 </section>
+
 <div class="divider">
   <div class="custom-shape-divider-bottom-1690984327">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -17,77 +106,16 @@
 </div>
 
 <style lang="scss">
-    /* Products */
-    #Products {
-        background-color: #9cb8bc;
-        margin-block-end: 0;
+  h2 {
+    display: flex;
+    justify-content: center;
 
-        div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+    position: relative;
+    color: hsl(var(--main-dark), 90%);
+  }
 
-            width: 100%;
-            max-width: 1100px;
-            margin-inline: auto;
-            padding: var(--padding);
-
-            h2 {
-                display: flex;
-                justify-content: center;
-
-                position: relative;
-                color: hsl(var(--main-dark), 90%);
-                font-size: 3rem;
-                margin-block-start: 0;
-                margin-block-end: 4rem;
-                
-                text-align: center;
-            }
-
-            h3 {
-                margin: 0;
-                font-size: .875rem;
-                color: hsl(var(--important));    
-
-                text-align: center;
-            }
-
-            div {
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            }
-        }
-
-        .checkout-more {
-          display: inline-flex; 
-          text-decoration: none;
-          margin-inline: auto;
-          padding: 1rem 2rem;
-
-          color: hsl(var(--text));
-          background-color: hsl(var(--important));
-          border-radius: .75rem;
-
-          box-shadow: 3px 3px 0 hsl(var(--text));
-
-          cursor: pointer;
-          user-select: none;
-
-          transition: translate 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-          &:is(:hover, :focus-visible) {
-            opacity: .9;
-          }
-
-          &:is(:active) {
-            translate: 3px 3px;
-            box-shadow: none;
-          }
-        }
-    }
-
-    .divider {
+  /* SVG */
+  .divider {
       height: 100px;
     }
 
@@ -110,4 +138,104 @@
     .custom-shape-divider-bottom-1690984327 .shape-fill {
         fill: #9cb8bc;
     }
+
+  /* Services */
+  #Services {
+    background-color: #9cb8bc;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      width: 100%;
+      max-width: 1100px;
+      margin-inline: auto;
+      padding: var(--padding);
+
+      & > h2 {
+        font-size: 3rem;
+        margin-block-start: 0;
+        margin-block-end: 4rem;
+
+        text-align: center;
+      }
+
+      & > h3 {
+        margin: 0;
+        font-size: 0.875rem;
+        color: hsl(var(--important));
+
+        text-align: center;
+      }
+    }
+  }
+  .list-of-services {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 2rem;
+
+    .card {
+      width: 100%;
+      border-radius: 0.25rem;
+      position: relative;
+
+      &:is(:hover) {
+        opacity: 0.95;
+      }
+
+      .card-inner {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 0.25rem;
+
+        box-shadow: 2px 2px 10px hsl(var(--main-dark), 0.8);
+
+        .front {
+          border-radius: 0.25rem;
+          overflow: hidden;
+
+          h3 {
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+          }
+        }
+
+        .front {
+          .card-img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 0.25rem;
+            z-index: 1;
+          }
+
+          .name-of-service {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            padding: 0.5rem 0;
+
+            background-color: hsl(var(--main-dark), 0.7);
+            text-align: center;
+            z-index: 2;
+
+            backdrop-filter: blur(2px);
+          }
+        }
+      }
+    }
+  }
+
+  [data-image="tributario"] {
+    object-fit: cover;
+    object-position: 0% 75%;
+  }
 </style>
