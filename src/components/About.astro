@@ -7,26 +7,47 @@ import { Icon } from "astro-icon";
   <div>
     <h2>¿Quienes Somos?</h2>
     <div class="wrapper">
-        <div class="about-us">
-            <picture>
-                <source media="(min-width: 700px)" srcset="/img/logo/logo-name.webp 450w" />
-                <source media="(max-width: 699px)" srcset="/img/logo/logo-name.webp 800w" />
-                <img loading="lazy" src="/img/logo/logo-name.webp" alt="algun logito de imagen aqui" style="max-width: 100%;">
-            </picture>
-            <div>
-                <h3><Icon class="about-us-icon" name="mdi:hammer-wrench" /> Bakkat</h3>
-                <p>Somos vendors y gestores comerciales, innovadores en indentificar y materializar soluciones eficientes, sustentables y segurar para apoartar la optimizacion de procesos operativos de nuestros clientes.</p>
-                <p>mas texto aqui.</p>
-                <h4>algun resumen de los servicios mas importantes (solo titulos)</h4>
-                <ul>
-                    <li>servicio 1</li>
-                    <li>servicio 2</li>
-                    <li>servicio 3</li>
-                </ul>
-            </div>
+      <div class="about-us">
+        <picture>
+          <source
+            media="(min-width: 700px)"
+            srcset="/img/logo/logo-name.webp 450w"
+          />
+          <source
+            media="(max-width: 699px)"
+            srcset="/img/logo/logo-name.webp 800w"
+          />
+          <img
+            loading="lazy"
+            src="/img/logo/logo-name.webp"
+            alt="algun logito de imagen aqui"
+            style="max-width: 100%;"
+          />
+        </picture>
+        <div>
+          <h3>
+            <Icon
+              class="about-us-icon"
+              name="mdi:hammer-wrench"
+            /> Bakkat
+          </h3>
+          <p>
+            Somos vendors y gestores comerciales, innovadores en indentificar y
+            materializar soluciones eficientes, sustentables y segurar para
+            apoartar la optimizacion de procesos operativos de nuestros
+            clientes.
+          </p>
+          <p>mas texto aqui.</p>
+          <h4>algun resumen de los servicios mas importantes (solo titulos)</h4>
+          <ul>
+            <li>servicio 1</li>
+            <li>servicio 2</li>
+            <li>servicio 3</li>
+          </ul>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
   <div>
     <h2>Especialistas e inovadores en</h2>
@@ -40,7 +61,11 @@ import { Icon } from "astro-icon";
         >
         <h3 class="title">Comercialización</h3>
         <p class="description">
-          Propositivos e Influyentes, basados en una vinculación estrecha con nuestros clientes, con la finalidad de descubrir e interpretar cada una de las necesidades según las características particulares de cada Operación, declarando vinculación de trazabilidad para asegurar Satisfacción de Cliente esperada.
+          Propositivos e Influyentes, basados en una vinculación estrecha con
+          nuestros clientes, con la finalidad de descubrir e interpretar cada
+          una de las necesidades según las características particulares de cada
+          Operación, declarando vinculación de trazabilidad para asegurar
+          Satisfacción de Cliente esperada.
         </p>
       </div>
       <div class="proposal fade">
@@ -52,7 +77,12 @@ import { Icon } from "astro-icon";
         >
         <h3 class="title">Fabricación</h3>
         <p class="description">
-          Contamos con la Tecnología, Innovación y Conocimiento, rigurosamente complementados con procesos regulados según a altos estándares y certificaciones internacionales, que aseguran la Fabricación de Productos de alto desempeño que aportan a la Eficiencia,  Disponibilidad Operacional y Gestión de Activos en cada una de las Plantas de Procesamiento de nuestros clientes.
+          Contamos con la Tecnología, Innovación y Conocimiento, rigurosamente
+          complementados con procesos regulados según a altos estándares y
+          certificaciones internacionales, que aseguran la Fabricación de
+          Productos de alto desempeño que aportan a la Eficiencia,
+          Disponibilidad Operacional y Gestión de Activos en cada una de las
+          Plantas de Procesamiento de nuestros clientes.
         </p>
       </div>
       <div class="proposal fade">
@@ -64,7 +94,45 @@ import { Icon } from "astro-icon";
         >
         <h3 class="title">Reparación y Recuperación</h3>
         <p class="description">
-          Brindamos las mejores Soluciones de Reparación y Recuperación de Componentes, procesos certificados de levantamiento de Condiciones y detección de fallas para asegurar la correcta reparación de componentes, enfocados a la extensión de vida útil de componentes, aportando a la sustentabilidad y reducción de huella de carbono de Nuestros Clientes.
+          Brindamos las mejores Soluciones de Reparación y Recuperación de
+          Componentes, procesos certificados de levantamiento de Condiciones y
+          detección de fallas para asegurar la correcta reparación de
+          componentes, enfocados a la extensión de vida útil de componentes,
+          aportando a la sustentabilidad y reducción de huella de carbono de
+          Nuestros Clientes.
+        </p>
+      </div>
+      <div class="proposal fade">
+        <span class="icon"
+          ><Icon
+            class="proposal-icon"
+            name="mdi:account-box"
+          /></span
+        >
+        <h3 class="title">Soporte Profesional</h3>
+        <p class="description">
+          Nuestro Equipo de Profesionales y Técnicos están siempre atentos a
+          sorprender con Soluciones y Aportes basados en la Innovación,
+          Seguridad y de Alta Eficiencia, gestionando junto a un equipo
+          multidisciplinario cada una de las respuestas según la necesidad de
+          cada cliente.
+        </p>
+      </div>
+      <div class="proposal fade">
+        <span class="icon"
+          ><Icon
+            class="proposal-icon"
+            name="mdi:phone-check"
+          /></span
+        >
+        <h3 class="title">Soporte Post-venta</h3>
+        <p class="description">
+          Comprometidos con los resultados operativos, seguridad y gestión de
+          nuestros clientes, materializado en entregar respuestas basados en un
+          Soporte Comprometido y Responsable 24/7, asegurando el ciclo de vida
+          eficiente y continuo de nuestros productos, además de levantar
+          Oportunidades para materializar el concepto de Mejora Continua según
+          las condiciones particulares de cada Operación.
         </p>
       </div>
     </div>
@@ -86,85 +154,72 @@ import { Icon } from "astro-icon";
 </section>
 
 <style lang="scss">
-    #About-us > div:first-child {
-        margin-block-end: 5rem;
-    }
+  #About-us > div:first-child {
+    margin-block-end: 5rem;
+  }
 
-    #About-us > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        filter: hue-rotate();
+  #About-us > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    filter: hue-rotate();
 
+    width: 100%;
+    max-width: 1100px;
+    margin-inline: auto;
+    padding: var(--padding);
+  }
 
-        width: 100%;
-        max-width: 1100px;
-        margin-inline: auto;
-        padding: var(--padding);
-    }
+  #About-us > div > h3 {
+    margin: 0;
+    font-size: 0.875rem;
+    color: hsl(var(--important));
 
-    #About-us > div > h3 {
-        margin: 0;
-        font-size: .875rem;
-        color: hsl(var(--important));    
+    text-align: center;
+  }
 
-        text-align: center;
-    }
+  #About-us > div > h2 {
+    font-size: 3rem;
+    margin-block-start: 0;
 
-    #About-us > div > h2 {
-        font-size: 3rem;
-        margin-block-start: 0;
-        
-        text-align: center;
-    }
+    text-align: center;
+  }
 
-    .wrapper {
-        display: flex;
-    }
+  .wrapper {
+    display: flex;
+  }
 
+  .about-us {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    max-height: min-content;
+  }
+
+  .about-us img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+  }
+
+  .about-us h3 {
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 699px) {
     .about-us {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
-
-        max-height: min-content;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem;
     }
+  }
 
-    .about-us img {
-        width: 100%;
-        height: auto;
-        border-radius: .25rem;
-    }
-
-    .about-us h3 {
-        margin: 0;
-    }
-
-    @media only screen and (max-width: 699px) {
-        .about-us {
-            grid-template-columns: repeat(1, 1fr);
-            gap: 1rem;
-        }
-    }
-
-    .about-us-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-        gap: var(--padding);
-        justify-items: center;
-    }
-
-    @media only screen and (max-width: 864px) {
-        .about-us-wrapper .proposal:nth-of-type(3) {
-            grid-column: 1 / 2 span;
-        }
-    }
-
-    @media only screen and (max-width: 595px) {
-        .about-us-wrapper .proposal:nth-of-type(3) {
-            grid-column: 1 / 1;
-        }
-    }
+  .about-us-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: var(--padding);
+    justify-items: center;
+  }
 
   .main-picture {
     max-width: 100%;
@@ -236,22 +291,11 @@ import { Icon } from "astro-icon";
 
   .about-us-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: var(--padding);
     justify-items: center;
+    justify-content: center;
     margin-block-end: 2rem;
-  }
-
-  @media only screen and (max-width: 864px) {
-    .about-us-wrapper .proposal:nth-of-type(3) {
-      grid-column: 1 / 2 span;
-    }
-  }
-
-  @media only screen and (max-width: 595px) {
-    .about-us-wrapper .proposal:nth-of-type(3) {
-      grid-column: 1 / 1;
-    }
   }
 
   .proposal {
